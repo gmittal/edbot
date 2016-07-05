@@ -1,2 +1,2 @@
-# edbot
-Basic Facebook Messenger bot for education
+# Ed Bot
+Basic Facebook Messenger bot for education.
