@@ -2,10 +2,12 @@
 Basic Facebook Messenger bot for education.
 
 ### Setup
-Create a ```.env``` file in the project root populated with the following information:
+Create a ```.env``` file in the project root populated with the following information (I used the Cleverbot API for example purposes):
 ```
 FB_EMAIL=notyourreal@email.ext
 FB_PASSWORD=fakeaccountpassword1234
+CLEVERBOT_USER=3YyVOYYzZtwRfFiT
+CLEVERBOT_KEY=1oZklYvgxJmMZzrqoZzjpBBEmP9XaoPM
 ```
 Run the bot script:
 ```
