@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gmittal/edbot#readme",
   "dependencies": {
+    "dotenv": "^2.0.0",
     "facebook-chat-api": "^1.1.0"
   }
 }
