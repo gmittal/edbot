@@ -2,6 +2,9 @@
 Basic Facebook Messenger bot for education.
 
 ### Setup
+```
+$ npm install
+```
 Create a ```.env``` file in the project root populated with the following information (I used the Cleverbot API for example purposes):
 ```
 FB_EMAIL=notyourreal@email.ext
