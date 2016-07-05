@@ -1,0 +1,22 @@
+{
+  "name": "edbot",
+  "version": "1.0.0",
+  "description": "Education chatbot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmittal/edbot.git"
+  },
+  "author": "Gautam Mittal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmittal/edbot/issues"
+  },
+  "homepage": "https://github.com/gmittal/edbot#readme",
+  "dependencies": {
+    "facebook-chat-api": "^1.1.0"
+  }
+}
