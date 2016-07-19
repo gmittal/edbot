@@ -1,7 +1,6 @@
 var dotenv = require('dotenv');
 dotenv.load();
-var cleverbot = require('cleverbot.io');
-var bot = new cleverbot(process.env.CLEVERBOT_USER, process.env.CLEVERBOT_KEY);
+var wolfram = require('wolfram-alpha').createClient(process.env.WOLFRAM_APP_ID);
 var login = require("facebook-chat-api");
 
 
