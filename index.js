@@ -23,11 +23,24 @@ login({email: process.env.FB_EMAIL, password: process.env.FB_PASSWORD}, function
       wolfram.query(query, function (err, result) {
         if (err) throw err;
 
-        var messages = [];
-        for (var ix = 0; ix < result.length; ix++) {
-          var uid = id.encode(rand_n());
-          var file = fs.createWriteStream(__dirname+"/"+uid+".gif");
-          api.sendMessage(result[ix].title, message.threadID);
+        var ix = 0;
+
+        nastyRecursive();
+        function nastyRecursive() {
+          if (ix < result.length) {
+            var uid = id.encode(rand_n());
+            var file = fs.createWriteStream(__dirname+"/"+uid+".gif");
+            console.log(result[ix].title);
+            var request = http.get(result[ix].subpods[0].image, function(response) {
+              response.pipe(file);
+
+              api.sendMessage({body:result[ix].title +":", attachment: fs.createReadStream(__dirname + '/'+uid+'.gif')}, message.threadID);
+              ix++;
+              nastyRecursive();
+
+            });
+
+          }
         }
 
 
