@@ -1,5 +1,5 @@
 # Ed Bot
-Basic Facebook Messenger bot for education. Currently uses Wolfram ALpha
+Basic Facebook Messenger bot for education using Wolfram Alpha.
 
 ### Setup
 ```
