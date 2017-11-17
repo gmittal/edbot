@@ -17,14 +17,11 @@ login({email: process.env.FB_EMAIL, password: process.env.FB_PASSWORD}, function
   if(err) return console.error(err);
 
   api.listen(function callback(err, message) {
-      // Process the input
       var query = message.body;
-
       wolfram.query(query, function (err, result) {
         if (err) throw err;
 
         var ix = 0;
-
         nastyRecursive();
         function nastyRecursive() {
           if (ix < result.length) {
@@ -37,16 +34,9 @@ login({email: process.env.FB_EMAIL, password: process.env.FB_PASSWORD}, function
               api.sendMessage({body:result[ix].title +":", attachment: fs.createReadStream(__dirname + '/'+uid+'.gif')}, message.threadID);
               ix++;
               nastyRecursive();
-
             });
-
           }
         }
-
-
-
-
       });
-
   });
 });
